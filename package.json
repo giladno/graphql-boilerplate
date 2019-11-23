@@ -1,0 +1,38 @@
+{
+    "name": "graphql-boilerplate",
+    "version": "1.0.0",
+    "description": "",
+    "engines": {
+        "node": ">=10.15"
+    },
+    "main": "handler.js",
+    "scripts": {
+        "start": "nodemon server.js",
+        "deploy": "NODE_ENV=production sls deploy",
+        "offline": "sls offline start",
+        "remove": "sls remove",
+        "logs": "sls logs -f graphql -t"
+    },
+    "keywords": [],
+    "author": "Gilad Novik <gilad@novik.ca>",
+    "license": "ISC",
+    "dependencies": {
+        "apollo-server": "^2.9.12",
+        "apollo-server-lambda": "^2.9.12",
+        "graphql": "^14.5.8",
+        "loglevel": "^1.6.6"
+    },
+    "devDependencies": {
+        "aws-sdk": "^2.578.0",
+        "babel-eslint": "^10.0.3",
+        "eslint": "^6.7.0",
+        "eslint-plugin-graphql": "^3.1.0",
+        "eslint-plugin-node": "^10.0.0",
+        "nodemon": "^2.0.1",
+        "serverless": "^1.58.0",
+        "serverless-dependson-plugin": "^1.1.2",
+        "serverless-dotenv-plugin": "^2.1.1",
+        "serverless-offline": "^5.12.0",
+        "serverless-vpc-plugin": "^0.9.3"
+    }
+}
